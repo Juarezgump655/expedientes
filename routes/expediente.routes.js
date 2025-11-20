@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { getExpedientes, crearExpediente } from "../controllers/Expediente.controller.js";
-
+import {loginController} from "../controllers/Auth.controller.js";
 const router = Router();
 
 router.get("/getExpedientes", getExpedientes);
