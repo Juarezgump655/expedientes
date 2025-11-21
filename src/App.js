@@ -1,13 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Login from './app/components/Login.jsx';
-import Expedientes from './app/components/Expedientes.jsx';
+import Expedientes from './app/pages/Expedientes.jsx';
+import Login from './app/pages/Login.jsx';
+import AppRouter from "./app/router/AppRouter";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Expedientes />
+        <AppRouter />
       </header>
     </div>
   );
