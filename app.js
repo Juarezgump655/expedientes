@@ -1,8 +1,10 @@
 import express from "express";
 import expedienteRoutes from "./routes/expediente.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import indiciosExpedienteRoutes from "./routes/IndiciosExpediente.routes.js";
 import cors from "cors";
 import validarToken from "./middlewares/auth.js";
+import catalogoRoutes from "./routes/catalogo.route.js";
 const port = 8081;
 const app = express();
 
@@ -16,6 +18,8 @@ app.use(validarToken);
 app.use(express.json());
 app.use("/api/expedientes", expedienteRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/indiciosExpediente", indiciosExpedienteRoutes);
+app.use("/api/catalogos", catalogoRoutes)
 
 
 app.get("/", (req, res) => {

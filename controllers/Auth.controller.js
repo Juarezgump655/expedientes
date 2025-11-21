@@ -7,13 +7,16 @@ export const loginController = async (req, res) => {
 
     return res.json({
       ok: true,
-      token: result
+      token: result.token,
+      nombre: result.nombre,
+      roles: result.roles,
+      pantallas: result.pantallas
     });
 
   } catch (err) {
     return res.status(400).json({
       ok: false,
-      msg: err.message
+      msgError: "Error al validar usuario y contraseña",
     });
   }
 }
