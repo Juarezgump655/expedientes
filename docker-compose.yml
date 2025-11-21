@@ -1,0 +1,17 @@
+services:
+
+  frontend:
+    build: ./frontend/expedientes
+    container_name: dicri-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./BACKEND/expedientes
+    container_name: dicri-backend
+    ports:
+      - "8081:8081" 
+    env_file:
+      - ./BACKEND/expedientes/env/Enviroment.pro.env
