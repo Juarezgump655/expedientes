@@ -1,0 +1,451 @@
+{
+	"info": {
+		"_postman_id": "98e386b1-1541-445e-b209-ec6cc5a92c03",
+		"name": "MP_PRUEBA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22281705",
+		"_collection_link": "https://uni999-5233.postman.co/workspace/Uni-Workspace~2ec222de-0185-471f-89bd-ee0cc9689d03/collection/22281705-98e386b1-1541-445e-b209-ec6cc5a92c03?action=share&source=collection_link&creator=22281705"
+	},
+	"item": [
+		{
+			"name": "Crear Expediente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \"Expediente de prueba\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/expedientes/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"expedientes",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener expedientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/expedientes/getExpedientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"expedientes",
+						"getExpedientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Catalogos por Nombre",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNjcyOTM2LCJleHAiOjE3NjM3MDE3MzZ9.XIfAJ5K4k4tN3grPxPjabJNEKIhw9mMGixQvbD7zubM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/catalogos/catalogosbytipo/COLORES",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"catalogos",
+						"catalogosbytipo",
+						"COLORES"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Indicios del Expediente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/indiciosExpediente/getDetalleExpediente/GDE2025000008",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"indiciosExpediente",
+						"getDetalleExpediente",
+						"GDE2025000008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ajuarezcastellanos45@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener expedientes por fechas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNjcyOTM2LCJleHAiOjE3NjM3MDE3MzZ9.XIfAJ5K4k4tN3grPxPjabJNEKIhw9mMGixQvbD7zubM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fechaInicioCrea\": \"2025-11-19\",\r\n  \"fechaFinCrea\": \"2025-11-20\",\r\n  \"fechaInicioRev\": \"null\",\r\n  \"fechaFinRev\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/expedientes/getExpedientesByFechas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"expedientes",
+						"getExpedientesByFechas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Expedientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"noExpediente\": \"2025112000012\",\r\n    \"idIndicio\": 15,\r\n    \"descripcion\": \"Actualización del indicio para marcaje y registro final.\",\r\n    \"estado\": 2,\r\n    \"justificacion\": \"Se completó la revisión y verificación de la información.\",\r\n    \"usuario_aprobo\": \"1234567890101\",\r\n    \"fecha_probo\": \"2025-11-20 19:37:00\",\r\n    \"fecha_creacion\": \"2025-11-19 14:22:00\",\r\n    \"secuencia\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/expedientes/getExpedientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"expedientes",
+						"getExpedientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar a estado registrado expediente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/expedientes/actualizarARegistrado/GDE2025000008",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"expedientes",
+						"actualizarARegistrado",
+						"GDE2025000008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revisar Expediente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"noExpediente\": \"GDE2025000008\",\r\n  \"estado\": 3,\r\n  \"justificacion\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/expedientes/revExpediente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"expedientes",
+						"revExpediente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener expedientes para revision",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/expedientes/getExpedientesRev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"expedientes",
+						"getExpedientesRev"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Indicio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"noExpediente\": \"GDE2025000008\",\r\n  \"color\": 2,\r\n  \"unidadMedidaTamaño\": 1,\r\n  \"unidadMedidaPeso\": 3,\r\n  \"tamaño\": 12.50,\r\n  \"peso\": 1.75,\r\n  \"descripcionObjeto\": \"Caja metálica con documentos confidenciales\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/indiciosExpediente/crearIndicioExpediente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"indiciosExpediente",
+						"crearIndicioExpediente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Indicio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJhanVhcmV6Y2FzdGVsbGFub3M0NUBnbWFpbC5jb20iLCJkcGkiOiIzMjE1Njk5ODcyMTIxIiwiaWF0IjoxNzYzNzQ2MjY2LCJleHAiOjE3NjM3NzUwNjZ9.y79mQLHMhxn2jFcMVYOnESHwK4qfyKPQuwS2lR1tP0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idIndicio\": 11,\r\n  \"color\": 2,\r\n  \"unidadMedidaTamaño\": 1,\r\n  \"unidadMedidaPeso\": 3,\r\n  \"tamaño\": 12.50,\r\n  \"peso\": 1.75,\r\n  \"descripcionObjeto\": \"Caja metálica con documentos confidenciales\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/indiciosExpediente/modificarIndicioExpediente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"indiciosExpediente",
+						"modificarIndicioExpediente"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
