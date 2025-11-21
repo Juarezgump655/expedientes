@@ -83,3 +83,28 @@ export const revExpeediente = async (data) => {
 
 };
 
+
+export const getExpedienteByFechas = async (fechaInicioCrea, fechaFinCrea, fechaInicioRev, fechaFinRev) => {    
+    try {
+        const pool = await getConnection();
+
+        // Convertir solo valores vacíos a NULL
+        const toNull = (v) => (v === "" || v === undefined || v === null ? null : v);
+
+        const result = await pool.request()
+            .input('fechaCreacionInicio', mssql.VarChar(30), toNull(fechaInicioCrea))
+            .input('fechaCreacionFin', mssql.VarChar(30), toNull(fechaFinCrea))
+            .input('fechaRevisionInicio', mssql.VarChar(30), toNull(fechaInicioRev))
+            .input('fechaRevisionFin', mssql.VarChar(30), toNull(fechaFinRev))
+            .execute('gestion_evidencias.sp_buscar_expedientes');
+
+        return result.recordset;
+
+    } catch (error) {
+        console.error("Error fetching expediente by fechas:", error);
+        throw error;
+    }
+};
+
+
+

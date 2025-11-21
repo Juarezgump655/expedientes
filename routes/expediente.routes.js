@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getExpedientes, crearExpediente, actualizarARegistradoIndicioExpedienteController,getExpedienteForRevisionController, revExpeedienteController } from "../controllers/Expediente.controller.js";
+import { getExpedientes, crearExpediente, actualizarARegistradoIndicioExpedienteController,getExpedienteForRevisionController, revExpeedienteController, getExpedientesByFechasController } from "../controllers/Expediente.controller.js";
 import {loginController} from "../controllers/Auth.controller.js";
 const router = Router();
 
@@ -8,4 +8,5 @@ router.post("/crear", crearExpediente);
 router.put("/actualizarARegistrado/:noExpediente", actualizarARegistradoIndicioExpedienteController);
 router.get("/getExpedientesRev", getExpedienteForRevisionController);
 router.post("/revExpediente", revExpeedienteController);
+router.post("/getExpedientesByFechas", getExpedientesByFechasController);
 export default router;

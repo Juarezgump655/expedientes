@@ -1,4 +1,4 @@
-import { getExpedientesService, crearExpedienteService , actualizarARegistradoIndicioExpediente, getExpedienteForRevision, revExpeediente} from "../services/Expedientes.js";
+import { getExpedientesService, crearExpedienteService , actualizarARegistradoIndicioExpediente, getExpedienteForRevision, revExpeediente, getExpedienteByFechas} from "../services/Expedientes.js";
 
 export const getExpedientes = async (req, res) => {
     try {
@@ -55,5 +55,17 @@ export const revExpeedienteController = async (req, res) => {
     } catch (error) {
         console.error("Error al obtener expediente para revision:", error);
         return res.status(500).json({ msgError: "Error al obtener expediente para revision" });
+    }
+};
+
+export const getExpedientesByFechasController = async (req, res) => {
+    const { fechaInicioCrea, fechaFinCrea, fechaInicioRev, fechaFinRev } = req.body;
+    console.log("Fechas recibidas:", fechaInicioCrea, fechaFinCrea, fechaInicioRev, fechaFinRev);
+    try {
+        const expedientes = await getExpedienteByFechas(fechaInicioCrea, fechaFinCrea, fechaInicioRev, fechaFinRev);
+        return res.json(expedientes);
+    } catch (error) {
+        console.error("Error fetching expedientes by fechas:", error);
+        return res.status(500).json({ msgError: "Internal Server Error" });
     }
 };
