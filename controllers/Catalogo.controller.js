@@ -1,4 +1,4 @@
-import { getCatalogoPorTipo } from "../services/Catalogos.js";
+import { getCatalogoPorTipo } from "../services/catalogos.js";
 
 export const getCatalogosByType= async (req, res) => {
     const { tipo } = req.params;
