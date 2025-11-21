@@ -77,8 +77,6 @@ export default function TablaExpedientes({ datos = [], onCloseDetalle }) {
           Limpiar filtros
         </button>
       </div>
-
-      {/* Tabla */}
       <div className="overflow-x-auto">
         <table className="min-w-full border border-gray-300 text-sm text-gray-700">
           <thead className="bg-gray-100">
@@ -132,8 +130,6 @@ export default function TablaExpedientes({ datos = [], onCloseDetalle }) {
           </tbody>
         </table>
       </div>
-
-      {/* Paginación */}
       <div className="flex gap-2 mt-4">
         {Array.from({ length: totalPaginas }, (_, i) => (
           <button

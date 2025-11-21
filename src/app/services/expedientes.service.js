@@ -29,3 +29,7 @@ export const revisarExpediente = async (data) => {
   return res.data;
 }
 
+export const buscarExpedientesPorFecha = async (filtros) => {
+  const res = await api.post("/expedientes/getExpedientesByFechas", filtros);
+  return res.data;
+} 
